@@ -13,13 +13,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 function App1(props) {
   const userEmail = props.user.email;
   const navigate = useNavigate();
-  // const location = useLocation(); // Use useLocation to access the location prop
-  // const userEmail = location?.state?.userEmail || "LOLyouDIDNTgetTHEemail222"; // Retrieve userEmail from location state
 
-  // const [loginEmail, setLoginEmail] = useState("userEmail");
-  // useEffect(() => {
-  //   setLoginEmail(userEmail);
-  // }, []);
   const [title, setTitle] = useState("");
   const [file, setFile] = useState("");
   const [selectedDomain, setSelectedDomain] = useState(""); // New state for selected domain
@@ -35,11 +29,6 @@ function App1(props) {
     getPdf();
   }, [submitted]);
 
-  // const getPdf = async () => {
-  //   const result = await axios.get("http://localhost:7500/get-files");
-  //   console.log(result.data.data);
-  //   setAllImage(result.data.data);
-  // };
   const getPdf = async () => {
     const result = await axios.get("http://localhost:7500/get-files");
     console.log(result.data.data);

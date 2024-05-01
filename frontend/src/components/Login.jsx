@@ -22,12 +22,6 @@ const Login = ({ setLoginUser }) => {
         })
     }
 
-    // useEffect(() => {
-    //     setUserEmail(user.email);
-    //     console.log("User Email1:", userEmail);
-    //     console.log("User Email2:", user.email);
-    //     console.log("User Object:", user);
-    // }, [user.email]);
     useEffect(() => {
         setUserEmail(user.email);
     }, [user.email]);
@@ -51,25 +45,18 @@ const Login = ({ setLoginUser }) => {
                     // alert(res.data.message);
                     navigate("/authorConsole");
                 } else if (res.data.status === "notOK") {
-                    // setUserEmail(user.email, () => {
-                    //     console.log("User Email1:", userEmail);
-                    //     console.log("User Email2:", user.email);
-                    //     console.log("User Object:", user);
-                    // }); // Log the entire user object
-                    // alert(res.data.message);
-                    // navigate("/submission", { state: { userEmail: user.email } });
                     setUserEmail(user.email);
                     // alert(res.data.message);
                     // navigate("/submission", { state: { userEmail } });
                     navigate("/submission");
-                } else if(res.data.status === "PWerror"){
+                } else if (res.data.status === "PWerror") {
                     const paraElement = document.getElementById("pari");
                     if (paraElement) {
                         paraElement.textContent = "Password didn't match";
                     }
                     // alert(res.data.message);
                     navigate("/login")
-                
+
                 } else {
                     const paraElement = document.getElementById("para");
                     if (paraElement) {
@@ -84,38 +71,6 @@ const Login = ({ setLoginUser }) => {
                 // Handle error if needed
             });
     }
-
-    // const login = () => {
-    //     axios.post("http://localhost:7500/login", user)
-    //         .then(res => {
-    //             setLoginUser(res.data.user);
-    //             setUser({
-    //                 email: "",
-    //                 password: ""
-    //             });
-
-    //             if (res.data.status === "ok") {
-    //                 alert(res.data.message);
-    //                 console.log("author console");
-    //                 navigate("/authorConsole");
-    //             } else if (res.data.status === "notOK") {
-    //                 alert(res.data.message);
-    //                 console.log("submission");
-    //                 if (res.data.passwordMatch) {
-    //                     navigate("/submission");
-    //                 }
-    //             }
-    //             else {
-    //                 alert(res.data.message);
-    //                 navigate("/login")
-    //             }
-    //         })
-    //         .catch(error => {
-    //             console.error("Error during login:", error);
-    //             // Handle error if needed
-    //         });
-    // }
-
 
     return (
         <div className="login container">

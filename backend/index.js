@@ -7,7 +7,7 @@ const MongoDBStore = require("connect-mongodb-session")(session);
 const nodemailer = require("nodemailer");
 
 const store = new MongoDBStore({
-  uri: "mongodb+srv://root:root@cluster0.pra3sxf.mongodb.net/myLoginRegisterDB",
+  uri: process.env.MONGO_URL,
   collection: "mySessions",
 });
 
@@ -40,8 +40,7 @@ app.use(cors());
 app.use("/files", express.static("files"));
 
 //mongodb connection----------------------------------------------
-const mongoUrl =
-  "mongodb+srv://root:root@cluster0.pra3sxf.mongodb.net/myLoginRegisterDB";
+const mongoUrl = process.env.MONGO_URL;
 
 mongoose
   .connect(mongoUrl, {

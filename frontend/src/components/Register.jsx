@@ -22,19 +22,7 @@ const Register = () => {
         })
     }
 
-    // const register = () => {
-    //     const { name, email, password, reEnterPassword } = user
-    //     if (name && email && password && (password === reEnterPassword)) {
-    //         axios.post("http://localhost:7500/register", user)
-    //             .then(res => {
-    //                 alert(res.data.message)
-    //                 navigate("/login")
-    //             })
-    //     } else {
-    //         alert("invalid input")
-    //     }
 
-    // }
     const register = () => {
         const { name, email, password, reEnterPassword } = user;
 
@@ -53,7 +41,7 @@ const Register = () => {
                 });
         } else {
             // alert("Email invalid!");
-            
+
         }
     };
 
