@@ -38,7 +38,7 @@ app.use(express.urlencoded({ extended: true }));
 const cors = require("cors");
 app.use(
   cors({
-    origin: [""],
+    origin: ["https://wt-project-frontend-mu.vercel.app"],
     methods: ["GET", "POST"],
     credentials: true,
   })
