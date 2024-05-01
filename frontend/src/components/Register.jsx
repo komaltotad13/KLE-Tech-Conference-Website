@@ -7,6 +7,8 @@ const Register = () => {
 
     const navigate = useNavigate();
 
+    axios.defaults.withCredentials = true;
+
     const [user, setUser] = useState({
         name: "",
         email: "",

@@ -9,6 +9,8 @@ const AuthorConsole = (props) => {
     const navigate = useNavigate();
     const [submissions, setSubmissions] = useState([]);
 
+    axios.defaults.withCredentials = true;
+
     useEffect(() => {
         // Fetch data from your backend API
         const fetchData = async () => {

@@ -8,6 +8,8 @@ const Reviewer = () => {
   const [newValues, setNewValues] = useState({}); // Object to store individual new values
   const [comments, setComments] = useState({}); // Object to store individual comments
 
+  axios.defaults.withCredentials = true;
+
   useEffect(() => {
     getPdf();
   }, []);

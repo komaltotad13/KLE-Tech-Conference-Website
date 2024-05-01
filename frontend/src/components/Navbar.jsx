@@ -5,11 +5,11 @@ import kle_logo2 from "../images/kle_logo.jpg";
 
 function Navbar() {
   const [dropdownVisible, setDropdownVisible] = useState(false);
-  
+
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
   };
- 
+
   return (
     <>
       <div className="nav-container">
@@ -24,23 +24,11 @@ function Navbar() {
         <Link to="/">
           <div className="nav-link">About</div>
         </Link>
-        
+
         <Link to="/">
           {" "}
           <div className="nav-link">Conferences</div>
         </Link>
-        {/* <Link to="/">
-          {" "}
-          <div className="nav-link">Welcome</div>
-        </Link>
-        <Link to="/">
-          {" "}
-          <div className="nav-link">Partners</div>
-        </Link>
-        <Link to="/">
-          {" "}
-          <div className="nav-link">Sponsers</div>
-        </Link> */}
         <Link to="/">
           {" "}
           <div className="nav-link">Contact</div>
@@ -49,7 +37,7 @@ function Navbar() {
           <div className="nav-link reg-btn">Register</div>
         </Link> */}
         <div className="dropdown">
-          <button className="nav-link reg-btn"  onClick={toggleDropdown}>Login</button>
+          <button className="nav-link reg-btn" onClick={toggleDropdown}>Login</button>
           <div className={`dropdown-content ${dropdownVisible ? "show" : ""}`}>
             <Link to="/login">Author</Link>
             <Link to="/login_rev">Reviewer</Link>
