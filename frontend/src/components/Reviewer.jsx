@@ -20,7 +20,7 @@ const Reviewer = () => {
       const comment = comments[email];
 
       // Send a POST request to the backend with the document ID, new value, and comments
-      const response = await axios.post('https://wt-project-backend.vercel.app//updateAttribute', {
+      const response = await axios.post('https://wt-project-backend.vercel.app/updateAttribute', {
         email: email,
         newPaperStatus: newValue,
         comments: comment,
@@ -37,13 +37,13 @@ const Reviewer = () => {
   };
 
   const getPdf = async () => {
-    const result = await axios.get(`https://wt-project-backend.vercel.app//get-reviewed-papers/${domain}`);
+    const result = await axios.get(`https://wt-project-backend.vercel.app/get-reviewed-papers/${domain}`);
     setReviewedPapers(result.data.data);
   };
 
   const showPdf = (data) => {
     if (data) {
-      window.open(`https://wt-project-backend.vercel.app//files/17059592444031.ANN.pdf`, "_blank", "noreferrer");
+      window.open(`https://wt-project-backend.vercel.app/files/17059592444031.ANN.pdf`, "_blank", "noreferrer");
     } else {
       console.error("PDF file not found. Check if the 'paper' property is correctly populated in the server response.");
     }

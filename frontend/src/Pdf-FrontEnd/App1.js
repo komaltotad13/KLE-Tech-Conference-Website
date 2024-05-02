@@ -31,7 +31,7 @@ function App1(props) {
 
   const getPdf = async () => {
     const result = await axios.get(
-      "https://wt-project-backend.vercel.app//get-files"
+      "https://wt-project-backend.vercel.app/get-files"
     );
     console.log(result.data.data);
 
@@ -56,7 +56,7 @@ function App1(props) {
     console.log(title, file, selectedDomain, userEmail);
 
     const result = await axios.post(
-      "https://wt-project-backend.vercel.app//upload-files",
+      "https://wt-project-backend.vercel.app/upload-files",
       formData,
       {
         headers: { "Content-Type": "multipart/form-data" },
@@ -74,9 +74,9 @@ function App1(props) {
   };
 
   const showPdf = (pdf) => {
-    // setPdfFile(`https://wt-project-backend.vercel.app//files/${pdf}`); // Within page
+    // setPdfFile(`https://wt-project-backend.vercel.app/files/${pdf}`); // Within page
     window.open(
-      `https://wt-project-backend.vercel.app//files/${pdf}`,
+      `https://wt-project-backend.vercel.app/files/${pdf}`,
       "_blank",
       "noreferrer"
     ); // Outside page

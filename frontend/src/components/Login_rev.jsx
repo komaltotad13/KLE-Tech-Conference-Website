@@ -23,7 +23,7 @@ const Login_rev = ({ setLoginUser }) => {
     }
 
     const login = () => {
-        axios.post("https://wt-project-backend.vercel.app//login_rev", user)
+        axios.post("https://wt-project-backend.vercel.app/login_rev", user)
             .then(res => {
                 // alert(res.data.message)
                 setLoginUser(res.data.user)
