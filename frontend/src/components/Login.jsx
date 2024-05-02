@@ -33,8 +33,8 @@ const Login = ({ setLoginUser }) => {
     }, [userEmail]);
 
     const login = () => {
-        // axios.get("http://localhost:7500/login").
-        axios.post("http://localhost:7500/login", user)
+        // axios.get("https://wt-project-backend.vercel.app//login").
+        axios.post("https://wt-project-backend.vercel.app//login", user)
             .then(res => {
                 console.log("User Object1:", user); // Log the entire user object
                 setLoginUser(res.data.user);

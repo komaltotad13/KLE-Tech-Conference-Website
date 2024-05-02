@@ -15,7 +15,7 @@ const AuthorConsole = (props) => {
         // Fetch data from your backend API
         const fetchData = async () => {
             try {
-                const response = await axios.post("http://localhost:7500/get-files", {
+                const response = await axios.post("https://wt-project-backend.vercel.app//get-files", {
                     user: props.user,
                 });
                 setSubmissions(response.data.data);
@@ -30,7 +30,7 @@ const AuthorConsole = (props) => {
     const handleLogout = async () => {
         try {
             // Make a request to the server to handle logout
-            // await axios.post("http://localhost:7500/logout");
+            // await axios.post("https://wt-project-backend.vercel.app//logout");
             // Redirect to the login page or any other desired page
             navigate("/");
         } catch (error) {
@@ -111,7 +111,7 @@ const SubmissionRow = ({ submission }) => (
             <td>{submission._id}</td>
             <td>{submission.title}</td>
             <td>
-                <a href={`http://localhost:7500/files/${submission.pdf}`} target="_blank" rel="noopener noreferrer">
+                <a href={`https://wt-project-backend.vercel.app//files/${submission.pdf}`} target="_blank" rel="noopener noreferrer">
                     View PDF
                 </a>
             </td>

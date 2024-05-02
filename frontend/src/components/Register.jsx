@@ -32,7 +32,7 @@ const Register = () => {
         const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
         if (name && email && password && (password === reEnterPassword) && emailRegex.test(email)) {
-            axios.post("http://localhost:7500/register", user)
+            axios.post("https://wt-project-backend.vercel.app//register", user)
                 .then(res => {
                     // alert(res.data.message);
                     navigate("/login");
