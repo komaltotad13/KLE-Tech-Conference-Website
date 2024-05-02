@@ -75,11 +75,7 @@ function App1(props) {
 
   const showPdf = (pdf) => {
     // setPdfFile(`https://wt-project-backend.vercel.app/files/${pdf}`); // Within page
-    window.open(
-      `https://wt-project-backend.vercel.app/files/${pdf}`,
-      "_blank",
-      "noreferrer"
-    ); // Outside page
+    window.open(`http://localhost:7500/files/${pdf}`, "_blank", "noreferrer"); // Outside page
   };
 
   return (
