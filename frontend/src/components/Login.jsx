@@ -7,7 +7,7 @@ const Login = ({ setLoginUser }) => {
 
     const navigate = useNavigate()
 
-    axios.defaults.withCredentials = true;
+
 
     const [user, setUser] = useState({
         email: "",
@@ -33,8 +33,8 @@ const Login = ({ setLoginUser }) => {
     }, [userEmail]);
 
     const login = () => {
-        // axios.get("https://wt-project-backend.vercel.app/login").
-        axios.post("https://wt-project-backend.vercel.app/login", user)
+        // axios.get("http://localhost:7500/login").
+        axios.post("http://localhost:7500/login", user)
             .then(res => {
                 console.log("User Object1:", user); // Log the entire user object
                 setLoginUser(res.data.user);

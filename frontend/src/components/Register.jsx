@@ -7,7 +7,7 @@ const Register = () => {
 
     const navigate = useNavigate();
 
-    axios.defaults.withCredentials = true;
+
 
     const [user, setUser] = useState({
         name: "",
@@ -32,7 +32,7 @@ const Register = () => {
         const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
         if (name && email && password && (password === reEnterPassword) && emailRegex.test(email)) {
-            axios.post("https://wt-project-backend.vercel.app/register", user)
+            axios.post("http://localhost:7500/register", user)
                 .then(res => {
                     // alert(res.data.message);
                     navigate("/login");
