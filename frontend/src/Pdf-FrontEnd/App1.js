@@ -56,7 +56,7 @@ function App1(props) {
     console.log(title, file, selectedDomain, userEmail);
 
     const result = await axios.post(
-      "https://wt-project-backend.vercel.app/upload-files",
+      "http://localhost:7500/upload-files",
       formData,
       {
         headers: { "Content-Type": "multipart/form-data" },
