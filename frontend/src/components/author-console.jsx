@@ -111,7 +111,7 @@ const SubmissionRow = ({ submission }) => (
             <td>{submission._id}</td>
             <td>{submission.title}</td>
             <td>
-                <a href={`https://wt-project-backend.vercel.app/files/${submission.pdf}`} target="_blank" rel="noopener noreferrer">
+                <a href={`http://localhost:7500/files/${submission.pdf}`} target="_blank" rel="noopener noreferrer">
                     View PDF
                 </a>
             </td>
