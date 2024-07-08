@@ -16,14 +16,3 @@ const PdfDetailsSchema = new mongoose.Schema(
 );
 
 mongoose.model("PdfDetails", PdfDetailsSchema);
-
-// const mongoose = require("mongoose");
-
-// const pdfDetailsSchema = new mongoose.Schema({
-//   title: String,
-//   email: String,
-//   pdf: String,
-//   paperID: String, // Add the paperID field
-// });
-
-// module.exports = mongoose.model("PdfDetails", pdfDetailsSchema);

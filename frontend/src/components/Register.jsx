@@ -7,8 +7,6 @@ const Register = () => {
 
     const navigate = useNavigate();
 
-
-
     const [user, setUser] = useState({
         name: "",
         email: "",
@@ -23,7 +21,6 @@ const Register = () => {
             [name]: value
         })
     }
-
 
     const register = () => {
         const { name, email, password, reEnterPassword } = user;
@@ -46,7 +43,6 @@ const Register = () => {
 
         }
     };
-
 
     return (
         <div className="register">

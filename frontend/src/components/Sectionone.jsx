@@ -1,4 +1,3 @@
-// Section_one.jsx
 import React from 'react';
 import './Sectionone.css';
 import image1 from '../images/bulb.jpg';

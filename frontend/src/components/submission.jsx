@@ -1,32 +1,10 @@
-// import React from "react"
-// import "./submission.css"
-// // import axios from "axios"
-// import { useNavigate } from "react-router-dom"
-
-// const Submission = () => {
-//     const navigate = useNavigate();
-
-//     return (
-//         <div className="submission">
-//             <div className="sub_btn" onClick={() => navigate("/pdf")}>
-//                 <button type="button">Submit Your Paper</button>
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default Submission;
-
 import React from "react";
 import "./submission.css"
 import { useNavigate } from "react-router-dom";
 import fraud from "./fraud.pdf";
-// import { useState } from "react";
 
 const Submission = (props) => {
     const navigate = useNavigate();
-    // const location = useLocation(); // Use useLocation to access the location prop
-    // const userEmail = location?.state?.userEmail || "LOLyouDIDNTgetTHEemail";
     const user = props.user
 
     return (
@@ -57,15 +35,6 @@ const Submission = (props) => {
                         conference. Please download the paper format document{" "}
                         <a href="fraud" download="./fraud.pdf">Download </a>.
                     </p>
-
-                    {/* <h2>Submission Process</h2>
-                <p className="submission-text">
-                    Please submit your research paper in PDF format through the{" "}
-                    <a href="https://cmt3.research.microsoft.com/ICPES2024" target="_blank">
-                        Microsoft CMT System
-                    </a>
-                    .
-                </p> */}
 
                     <h2>Review Process</h2>
                     <p className="submission-text">

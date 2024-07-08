@@ -9,8 +9,6 @@ const AuthorConsole = (props) => {
     const navigate = useNavigate();
     const [submissions, setSubmissions] = useState([]);
 
-
-
     useEffect(() => {
         // Fetch data from your backend API
         const fetchData = async () => {
@@ -29,9 +27,6 @@ const AuthorConsole = (props) => {
 
     const handleLogout = async () => {
         try {
-            // Make a request to the server to handle logout
-            // await axios.post("https://wt-project-backend.vercel.app/logout");
-            // Redirect to the login page or any other desired page
             navigate("/");
         } catch (error) {
             console.error("Error during logout:", error);

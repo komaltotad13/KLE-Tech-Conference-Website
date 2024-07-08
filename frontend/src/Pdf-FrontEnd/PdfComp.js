@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Document, Page } from "react-pdf";
-// import pdf from "./1.pdf";
 
 function PdfComp(props) {
   const [numPages, setNumPages] = useState();
@@ -12,7 +11,7 @@ function PdfComp(props) {
 
   return (
     <div className="pdf-div">
-           <p>
+      <p>
         Page {pageNumber} of {numPages}
       </p>
       <Document file={props.pdfFile} onLoadSuccess={onDocumentLoadSuccess}>
@@ -28,7 +27,6 @@ function PdfComp(props) {
             );
           })}
       </Document>
-   
     </div>
   );
 }
