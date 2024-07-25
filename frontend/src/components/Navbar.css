@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+
+.nav-main-container {
+  background-image: url("../images/kle_banner.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 115vh;
+  margin-top: -97px;
+  position: relative;
+}
+
+.centered-text {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff; /* Set text color */
+}
+
+.centered-text h1 {
+  font-size: 36px; /* Adjust font size */
+  font-weight: bold;
+  /* Add any other text styles you desire */
+}
+
+/* Pseudo-element for black overlay */
+.nav-main-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.566); /* Black overlay with 0.5 opacity */
+  z-index: 1; /* Set z-index to be between background and content */
+}
+
+/* Styles for .nav-container */
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  height: 10vh;
+  background-color: #271b2900;
+  gap: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+/* Styles for links in .nav-container */
+a {
+  color: #efdede;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.reg-btn {
+  background-color: #f0dada;
+  color: #271b29;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.head1 {
+  font-size: 70px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  font-family: "DM Serif Display", serif;
+}
+.head1d {
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+.head2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff700;
+  text-align: center;
+
+  font-family: "DM Serif Display", serif;
+}
+.head2d {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.head3 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.head3d {
+  margin-top: 29px;
+  margin-bottom: 20px;
+}
+.centered-text {
+  width: 80%;
+  margin-top: 100px;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Show the dropdown content */
+.dropdown-content.show {
+  display: block;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* .button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+} */
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover //change is required */ 
+/* .dropdown:hover .dropdown-content {
+  display: block;
+} */
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
